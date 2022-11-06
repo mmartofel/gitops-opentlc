@@ -22,8 +22,8 @@ spec:
     spec:
       containers:
       - name: acme-postgres
-        imagePullPolicy: IfNotPresent
         image: registry.redhat.io/rhel8/postgresql-12:latest
+        imagePullPolicy: Always
         ports:
           - containerPort: 5432
             protocol: TCP

@@ -26,6 +26,7 @@ spec:
       containers:
         - name: acme-frontend
           image: quay.io/mmartofe/acme-frontend:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
               protocol: TCP
