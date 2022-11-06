@@ -1,13 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: namespace-rozdzielnia
+  name: acme-postgres
 spec:
   destination:
     name: ''
+    namespace: rozdzielnia
     server: 'https://kubernetes.default.svc'
   source:
-    path: deployment/acme-namespace
+    path: deployment/acme-postgres
     repoURL: 'https://github.com/mmartofel/gitops-opentlc'
     targetRevision: HEAD
   project: acme-frontend-microservice-postgres
