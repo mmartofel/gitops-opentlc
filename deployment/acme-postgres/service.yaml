@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: acme-postgres
+  labels:
+    app: acme-postgres
+    app.kubernetes.io/component: acme-postgres
+    app.kubernetes.io/instance: acme-postgres
+spec:
+  ports:
+  - name: 5432-tcp
+    port: 5432
+    targetPort: 5432
+  selector:
+    app: acme-postgres
+  type: ClusterIP
+  sessionAffinity: None

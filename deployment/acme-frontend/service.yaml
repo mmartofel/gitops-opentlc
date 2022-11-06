@@ -1,0 +1,21 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: acme-frontend
+  labels:
+    app: acme-frontend
+    app.kubernetes.io/component: acme-frontend
+    app.kubernetes.io/instance: acme-frontend
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  internalTrafficPolicy: Cluster
+  type: ClusterIP
+  sessionAffinity: None
+  selector:
+    deployment: acme-frontend
+status:
+  loadBalancer: {}

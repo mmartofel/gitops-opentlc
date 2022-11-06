@@ -1,0 +1,9 @@
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: acme-production
+  labels:
+    openshift.io/cluster-monitoring: 'true'
+  annotations:
+    openshift.io/description: 'ACME Production Environment'
+    openshift.io/display-name: 'ACME Production'

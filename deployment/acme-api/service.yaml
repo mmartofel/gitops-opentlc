@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: acme-api
+  labels:
+    app: acme-api
+    app.kubernetes.io/component: acme-api
+    app.kubernetes.io/instance: acme-api
+spec:
+  ports:
+  - name: http-8080
+    port: 8080
+    targetPort: 8080
+  - name: https-8443
+    port: 8443
+    targetPort: 8443
+  - name: https-8778
+    port: 8778
+    targetPort: 8778
+  selector:
+    deployment: acme-api
+  type: ClusterIP
+  sessionAffinity: None    

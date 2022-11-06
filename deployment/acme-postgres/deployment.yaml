@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app.openshift.io/vcs-uri: 'https://github.com/mmartofel/kuberneter-probes/tree/main/deployment/store'
+  labels:
+    app: acme-postgres
+    app.kubernetes.io/component: database
+    app.kubernetes.io/name: acme-postgres
+    app.kubernetes.io/part-of: DATA_SUBSYSTEM
+    app.openshift.io/runtime: postgresql
+  name: acme-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acme-postgres
+  template:
+    metadata:
+      labels:
+        app: acme-postgres
+    spec:
+      containers:
+      - name: acme-postgres
+        imagePullPolicy: IfNotPresent
+        image: registry.redhat.io/rhel8/postgresql-12:latest
+        ports:
+          - containerPort: 5432
+            protocol: TCP
+        envFrom:
+          - configMapRef:
+             name: postgres-setup-configmap
+        resources: {}

@@ -1,0 +1,32 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  annotations:
+    app.openshift.io/vcs-uri: 'https://github.com/mmartofel/kuberneter-probes-frontend'
+    app.openshift.io/connects-to: 'acme-api'
+  name: acme-frontend
+  labels:
+    app: acme-frontend
+    app.kubernetes.io/component: acme-frontend
+    app.kubernetes.io/instance: acme-frontend
+    app.kubernetes.io/part-of: ANGULAR_DEMO_APP
+    app.openshift.io/runtime: angularjs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: acme-frontend
+  template:
+    metadata:
+      labels:
+        deployment: acme-frontend
+      annotations:
+        openshift.io/generated-by: MarekMartofel
+    spec:
+      containers:
+        - name: acme-frontend
+          image: quay.io/mmartofe/acme-frontend:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources: {}

@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: acme-frontend-microservice-postgres
+  namespace: acme-production
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  description: Project to host frontend microservices and Postgres database 
+  destinations:
+    - name: '*'
+      namespace: acme-production
+      server: '*'
+  sourceRepos:
+    - '*'
+status: {}

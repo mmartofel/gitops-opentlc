@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: acme-frontend
+  labels:
+    app: acme-frontend
+    app.kubernetes.io/component: acme-frontend
+    app.kubernetes.io/instance: acme-frontend
+spec:
+  to:
+    kind: Service
+    name: acme-frontend
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
