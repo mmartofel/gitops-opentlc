@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     app.openshift.io/connects-to: 'acme-postgres'
-    app.openshift.io/vcs-uri: 'https://github.com/mmartofel/kuberneter-probes.git'
+    app.openshift.io/vcs-uri: 'https://github.com/mmartofel/kuberneter-probes-frontend'
   labels:
     app: acme-api
     app.kubernetes.io/component: acme-api
