@@ -10,7 +10,7 @@ spec:
   description: Project to host frontend microservices and Postgres database 
   destinations:
     - name: '*'
-      namespace: acme-production
+      namespace: '*'
       server: '*'
   sourceRepos:
     - '*'

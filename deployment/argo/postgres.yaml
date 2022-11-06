@@ -4,8 +4,8 @@ metadata:
   name: postgres
 spec:
   destination:
-    name: 'Pozstgres 12 database'
-    namespace: acme-production
+    name: ''
+    namespace: rozdzielnia
     server: 'https://kubernetes.default.svc'
   source:
     path: deployment/acme-postgres

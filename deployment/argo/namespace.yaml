@@ -1,11 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: namespace
+  name: namespace-rozdzielnia
 spec:
   destination:
-    name: 'namespace acme-production deffinition'
-    namespace: acme-production
+    name: ''
     server: 'https://kubernetes.default.svc'
   source:
     path: deployment/acme-namespace
