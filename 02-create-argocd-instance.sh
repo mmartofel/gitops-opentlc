@@ -1,1 +1,1 @@
-oc apply -f ./deployment/argocd-instance/argocd-instance.yaml
+oc apply -f ./deployment/argocd-instance/argocd-instance.yaml -n rozdzielnia

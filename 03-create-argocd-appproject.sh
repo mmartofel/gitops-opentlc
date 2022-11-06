@@ -1,2 +1,1 @@
-oc apply -f ./deployment/argo/acme-argo-appproject.yaml
-
+oc apply -f ./deployment/argo/acme-argo-appproject.yaml -n rozdzielnia
