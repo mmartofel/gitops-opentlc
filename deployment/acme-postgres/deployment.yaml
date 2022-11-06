@@ -7,7 +7,7 @@ metadata:
     app: acme-postgres
     app.kubernetes.io/component: database
     app.kubernetes.io/name: acme-postgres
-    app.kubernetes.io/part-of: DATA_SUBSYSTEM
+    app.kubernetes.io/part-of: ACME_APPLICATION
     app.openshift.io/runtime: postgresql
   name: acme-postgres
 spec:

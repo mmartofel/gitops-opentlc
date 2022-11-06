@@ -9,7 +9,7 @@ metadata:
     app: acme-frontend
     app.kubernetes.io/component: acme-frontend
     app.kubernetes.io/instance: acme-frontend
-    app.kubernetes.io/part-of: ANGULAR_DEMO_APP
+    app.kubernetes.io/part-of: ACME_APPLICATION
     app.openshift.io/runtime: angularjs
 spec:
   replicas: 1

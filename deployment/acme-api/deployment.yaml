@@ -8,7 +8,7 @@ metadata:
     app: acme-api
     app.kubernetes.io/component: acme-api
     app.kubernetes.io/instance: acme-api
-    app.kubernetes.io/part-of: QUARKUS_API_SERVICE
+    app.kubernetes.io/part-of: ACME_APPLICATION
     app.openshift.io/runtime: quarkus
   name: acme-api
 spec:
