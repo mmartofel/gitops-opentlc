@@ -32,9 +32,9 @@ spec:
               protocol: TCP
           resources:
             requests:
-              memory: "64Mi"
-              cpu: "250m"
-            limits:
               memory: "512Mi"
+              cpu: "512m"
+            limits:
+              memory: "768Mi"
               cpu: "1500m"        
 
