@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: acme-frontend-microservice-postgres
-  namespace: acme-production
+  namespace: rozdzielnia
 spec:
   clusterResourceWhitelist:
     - group: '*'

@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespace
+spec:
+  destination:
+    name: 'namespace acme-production deffinition'
+    namespace: acme-production
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: deployment/acme-namespace
+    repoURL: 'https://github.com/mmartofel/gitops-opentlc'
+    targetRevision: HEAD
+  project: acme-frontend-microservice-postgres

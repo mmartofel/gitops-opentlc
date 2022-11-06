@@ -4,11 +4,11 @@ metadata:
   name: postgres
 spec:
   destination:
-    name: ''
+    name: 'Pozstgres 12 database'
     namespace: acme-production
     server: 'https://kubernetes.default.svc'
   source:
-    path: deployment/postgres
-    repoURL: 'https://github.com/mmartofel/kuberneter-probes'
+    path: deployment/acme-postgres
+    repoURL: 'https://github.com/mmartofel/gitops-opentlc'
     targetRevision: HEAD
-  project: default
+  project: acme-frontend-microservice-postgres
