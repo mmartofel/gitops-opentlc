@@ -1,0 +1,5 @@
+resources:
+ - persistent-volume.yaml
+ - deployment.yaml
+ - route.yaml
+ - service.yaml

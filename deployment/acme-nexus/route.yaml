@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: nexus
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: nexus
+spec:
+  port:
+    targetPort: 8081-tcp
+  to:
+    kind: Service
+    name: nexus
+    weight: 100
